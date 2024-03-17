@@ -61,6 +61,10 @@ kotlin {
             implementation(compose.material3)
             implementation(project(":resources:library"))
         }
+        commonTest.dependencies {
+            implementation(libs.kotlinx.coroutines.test)
+            implementation(kotlin("test"))
+        }
         val desktopMain by getting
         desktopMain.dependencies {
             implementation(compose.desktop.common)
